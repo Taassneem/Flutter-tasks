@@ -1,7 +1,7 @@
 void main() {
   primeNumber(n: 3);
   primeNumber2(5);
-  //primeNumber3();
+  primeNumber3(2);
   Car car1 = Car(name: 'Range Rover', model: 2023, color: 'White');
   print(
       'first car name ${car1.name}, car model ${car1.model}, car color ${car1.color}');
@@ -46,16 +46,16 @@ void primeNumber2(int n) {
 }
 
 //! optional
-// void primeNumber3([int n = 0]) {
-//   if (n == 1 || n == 0) {
-//     print('Number is not prime.');
-//   }
-//   for (int i = 2; i < n; i++) {
-//     if (n % i == 0) print('Number is not prime.');
-//     break;
-//   }
-//   print('Number is prime.');
-// }
+void primeNumber3([int? n ]) {
+  if (n == 1 || n == 0) {
+    print('Number is not prime.');
+  }
+  for (int i = 2; i *i< n!; ) {
+    if (n % i == 0) print('Number is not prime.');
+    break;
+  }
+  print('Number is prime.');
+}
 
 // 2.
 class Car {
